@@ -476,6 +476,39 @@ main {
   color: var(--primary);
 }
 
+/* Highlights */
+.highlights-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: var(--spacing-4);
+}
+
+.highlight-card {
+  background: var(--bg-primary);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg);
+  padding: var(--spacing-5);
+  transition: var(--transition);
+}
+
+.highlight-card:hover {
+  border-color: var(--primary);
+  transform: translateY(-2px);
+}
+
+.highlight-title {
+  font-size: 1rem;
+  font-weight: 600;
+  color: var(--text-primary);
+  margin-bottom: var(--spacing-2);
+}
+
+.highlight-desc {
+  color: var(--text-secondary);
+  font-size: 0.9rem;
+  line-height: 1.7;
+}
+
 /* Experience Cards */
 .experience-list {
   display: flex;
@@ -743,6 +776,10 @@ footer {
   }
 
   .skills-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .highlights-grid {
     grid-template-columns: 1fr;
   }
 
