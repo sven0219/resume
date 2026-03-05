@@ -17,7 +17,7 @@
     <nav class="nav">
       <div class="nav-container">
         <div class="logo">
-          <span class="logo-prefix">~$</span> sven
+          <span class="logo-prefix">~$</span> <span data-zh="沈文强 · DevOps 简历" data-en="Sven Shen · DevOps Resume">沈文强 · DevOps 简历</span>
         </div>
         <div class="nav-right">
           <div class="status-indicator">
@@ -25,8 +25,8 @@
             <span data-zh="开放机会" data-en="Open to opportunities">开放机会</span>
           </div>
           <div class="lang-switch">
-            <button class="lang-btn active" data-lang="zh">中文</button>
-            <button class="lang-btn" data-lang="en">EN</button>
+            <button class="lang-btn" data-lang="zh">中文</button>
+            <button class="lang-btn active" data-lang="en">EN</button>
           </div>
         </div>
       </div>
@@ -67,7 +67,7 @@
     <span class="yaml-value">[AWS, Alibaba, Tencent, QingCloud]</span>
   <span class="yaml-key">tools:</span>
     <span class="yaml-value">[K8s, Docker, Terraform, Ansible, ArgoCD]</span>
-  <span class="yaml-key">status:</span> <span class="yaml-string">"Open to new opportunities"</span></pre>
+  <span class="yaml-key" data-zh="状态:" data-en="status:">status:</span> <span class="yaml-string" data-zh="&quot;开放新的工作机会&quot;" data-en="&quot;Open to new opportunities&quot;">"Open to new opportunities"</span></pre>
                 </div>
                 <div class="terminal-line">
                   <span class="terminal-prompt">$</span>
@@ -202,6 +202,39 @@
                 <span class="skill-tag">Golang</span>
                 <span class="skill-tag">Bash</span>
               </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+
+      <!-- Highlights Section -->
+      <section class="section section-alt">
+        <div class="container">
+          <div class="section-header">
+            <p class="section-tag"><span class="comment">//</span> <span data-zh="核心优势" data-en="Core Strengths">核心优势</span></p>
+            <h2 class="section-title" data-zh="DevOps 亮点" data-en="DevOps Highlights">DevOps 亮点</h2>
+          </div>
+
+          <div class="highlights-grid">
+            <div class="highlight-card">
+              <h3 class="highlight-title" data-zh="平台稳定性与 SRE 实践" data-en="Platform Reliability & SRE">平台稳定性与 SRE 实践</h3>
+              <p class="highlight-desc" data-zh="围绕可用性、可观测性与故障响应建立统一运维基线，覆盖日志、指标、告警与应急处理流程。" data-en="Established unified operational baselines focused on availability, observability, and incident response, covering logs, metrics, alerting, and on-call workflows.">围绕可用性、可观测性与故障响应建立统一运维基线，覆盖日志、指标、告警与应急处理流程。</p>
+            </div>
+
+            <div class="highlight-card">
+              <h3 class="highlight-title" data-zh="CI/CD 与 GitOps 标准化" data-en="CI/CD & GitOps Standardization">CI/CD 与 GitOps 标准化</h3>
+              <p class="highlight-desc" data-zh="基于 Terraform、Ansible、GitHub Actions、ArgoCD/Flux CD 构建可复用交付模板，提升发布一致性与回滚效率。" data-en="Built reusable delivery templates with Terraform, Ansible, GitHub Actions, and ArgoCD/Flux CD to improve release consistency and rollback efficiency.">基于 Terraform、Ansible、GitHub Actions、ArgoCD/Flux CD 构建可复用交付模板，提升发布一致性与回滚效率。</p>
+            </div>
+
+            <div class="highlight-card">
+              <h3 class="highlight-title" data-zh="多云与混合基础设施治理" data-en="Multi-Cloud & Hybrid Infrastructure">多云与混合基础设施治理</h3>
+              <p class="highlight-desc" data-zh="具备 AWS、阿里云、腾讯云、青云与 IDC 混合环境运维经验，能在不同云环境下统一规范与自动化能力。" data-en="Hands-on operations experience across AWS, Alibaba Cloud, Tencent Cloud, QingCloud, and IDC environments with unified standards and automation practices.">具备 AWS、阿里云、腾讯云、青云与 IDC 混合环境运维经验，能在不同云环境下统一规范与自动化能力。</p>
+            </div>
+
+            <div class="highlight-card">
+              <h3 class="highlight-title" data-zh="交付协作与工程化推动" data-en="Cross-Functional Delivery Enablement">交付协作与工程化推动</h3>
+              <p class="highlight-desc" data-zh="能够与研发、测试、产品及客户团队协同，沉淀标准文档与流程，推动平台化、工程化和合规落地。" data-en="Collaborated effectively with engineering, QA, product, and client teams to drive platformization, process standardization, and compliance readiness.">能够与研发、测试、产品及客户团队协同，沉淀标准文档与流程，推动平台化、工程化和合规落地。</p>
             </div>
           </div>
         </div>
@@ -376,7 +409,7 @@
 
       // Language switch functionality
       const langBtns = document.querySelectorAll('.lang-btn');
-      let currentLang = 'zh';
+      let currentLang = 'en';
 
       function switchLanguage(lang) {
         currentLang = lang;
@@ -401,7 +434,7 @@
       });
 
       const savedLang = localStorage.getItem('preferred-lang');
-      if (savedLang) switchLanguage(savedLang);
+      switchLanguage(savedLang || 'en');
 
       // Intersection Observer for animations
       const observer = new IntersectionObserver((entries) => {
@@ -413,7 +446,7 @@
         });
       }, { threshold: 0.1 });
 
-      document.querySelectorAll('.skill-card, .experience-card, .contact-item, .education-card').forEach(el => {
+      document.querySelectorAll('.skill-card, .highlight-card, .experience-card, .contact-item, .education-card').forEach(el => {
         observer.observe(el);
       });
     </script>
