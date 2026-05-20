@@ -561,6 +561,10 @@ html[data-theme='light'] .contact-item {
   backdrop-filter: blur(10px);
 }
 
+.modal-backdrop[hidden] {
+  display: none;
+}
+
 .modal-card {
   position: relative;
   width: min(100%, 420px);
