@@ -298,7 +298,7 @@
               <div class="experience-header">
                 <div class="experience-meta">
                   <span class="experience-date">2022.05 - <span data-zh="至今" data-en="Present">至今</span></span>
-                  <span class="experience-duration" data-start="2022-05" data-current="true">4 yrs 1 mo</span>
+                  <span class="experience-duration" data-start="2022-05" data-end="present">4 yrs 1 mo</span>
                 </div>
                 <h3 class="experience-title" data-zh="高级 DevOps 工程师" data-en="Senior DevOps Engineer">高级 DevOps 工程师</h3>
                 <p class="experience-company">
@@ -326,7 +326,7 @@
               <div class="experience-header">
                 <div class="experience-meta">
                   <span class="experience-date">2020.09 - 2022.05</span>
-                  <span class="experience-duration">1 yr 9 mos</span>
+                  <span class="experience-duration" data-start="2020-09" data-end="2022-05">1 yr 9 mos</span>
                 </div>
                 <h3 class="experience-title" data-zh="DevOps 工程师" data-en="DevOps Engineer">DevOps 工程师</h3>
                 <p class="experience-company">
@@ -353,7 +353,7 @@
               <div class="experience-header">
                 <div class="experience-meta">
                   <span class="experience-date">2018.07 - 2020.09</span>
-                  <span class="experience-duration">2 yrs 3 mos</span>
+                  <span class="experience-duration" data-start="2018-07" data-end="2020-09">2 yrs 3 mos</span>
                 </div>
                 <h3 class="experience-title" data-zh="运维工程师" data-en="Operations Engineer">运维工程师</h3>
                 <p class="experience-company">
@@ -534,11 +534,26 @@
         updateCurrentDurations();
       }
 
-      function formatDuration(startValue, lang) {
+      function getMonthDiff(startValue, endValue) {
         const [startYear, startMonth] = startValue.split('-').map(Number);
-        const now = new Date();
-        let months = (now.getFullYear() - startYear) * 12 + (now.getMonth() + 1 - startMonth);
+        let endYear;
+        let endMonth;
+
+        if (endValue === 'present') {
+          const now = new Date();
+          endYear = now.getFullYear();
+          endMonth = now.getMonth() + 1;
+        } else {
+          [endYear, endMonth] = endValue.split('-').map(Number);
+        }
+
+        let months = (endYear - startYear) * 12 + (endMonth - startMonth);
         if (months < 0) months = 0;
+        return months;
+      }
+
+      function formatDuration(startValue, endValue, lang) {
+        const months = getMonthDiff(startValue, endValue);
         const years = Math.floor(months / 12);
         const remainingMonths = months % 12;
 
@@ -554,10 +569,11 @@
       }
 
       function updateCurrentDurations() {
-        document.querySelectorAll('.experience-duration[data-current="true"]').forEach((el) => {
+        document.querySelectorAll('.experience-duration[data-start][data-end]').forEach((el) => {
           const startValue = el.dataset.start;
-          if (!startValue) return;
-          el.textContent = formatDuration(startValue, currentLang);
+          const endValue = el.dataset.end;
+          if (!startValue || !endValue) return;
+          el.textContent = formatDuration(startValue, endValue, currentLang);
         });
       }
 
