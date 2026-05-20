@@ -565,7 +565,9 @@
       const savedTheme = localStorage.getItem('preferred-theme');
       const browserLang = (navigator.language || navigator.userLanguage || 'en').toLowerCase();
       const defaultLang = browserLang.startsWith('zh') ? 'zh' : 'en';
-      applyTheme(savedTheme || 'dark');
+      const prefersDarkTheme = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches;
+      const defaultTheme = prefersDarkTheme ? 'dark' : 'light';
+      applyTheme(savedTheme || defaultTheme);
       switchLanguage(savedLang || defaultLang);
 
       // Intersection Observer for animations
