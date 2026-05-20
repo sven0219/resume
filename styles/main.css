@@ -101,6 +101,21 @@ body {
   overflow-x: hidden;
 }
 
+body.app-loading nav,
+body.app-loading main,
+body.app-loading footer,
+body.app-loading .modal-backdrop {
+  visibility: hidden;
+  opacity: 0;
+}
+
+nav,
+main,
+footer,
+.modal-backdrop {
+  transition: opacity 120ms ease;
+}
+
 /* Background Effects */
 .bg-grid {
   position: fixed;
