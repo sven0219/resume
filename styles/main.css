@@ -933,6 +933,14 @@ footer {
     gap: var(--spacing-2);
   }
 
+  .hero-notice-dot {
+    margin-top: 0.35rem;
+  }
+
+  .hero-notice-content {
+    width: 100%;
+  }
+
   .terminal-body {
     font-size: 0.75rem;
   }
