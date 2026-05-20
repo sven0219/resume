@@ -331,25 +331,30 @@ main {
 }
 
 .hero .container {
-  max-width: 1140px;
+  width: 100%;
+  max-width: 1600px;
+  padding: 0 var(--spacing-3);
 }
 
 .hero-content {
   width: 100%;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  --hero-copy-width: 860px;
-  --hero-panel-width: 1040px;
+  --hero-copy-width: 920px;
+  --hero-panel-width: 1440px;
 }
 
 .hero-intro {
-  width: min(100%, var(--hero-copy-width));
+  width: 100%;
+  max-width: var(--hero-copy-width);
+  margin-left: auto;
+  margin-right: auto;
   margin-bottom: var(--spacing-6);
 }
 
 .hero-notice {
-  width: min(100%, var(--hero-panel-width));
+  width: 100%;
+  max-width: var(--hero-panel-width);
+  margin-left: auto;
+  margin-right: auto;
   display: flex;
   align-items: center;
   gap: var(--spacing-3);
@@ -417,7 +422,10 @@ main {
 }
 
 .terminal-window {
-  width: min(100%, var(--hero-panel-width));
+  width: 100%;
+  max-width: var(--hero-panel-width);
+  margin-left: auto;
+  margin-right: auto;
   background: var(--bg-secondary);
   border: 1px solid var(--border);
   border-radius: var(--radius-xl);
@@ -522,7 +530,10 @@ html[data-theme='light'] .contact-item {
 .hero-actions {
   display: grid;
   grid-template-columns: repeat(4, minmax(0, 1fr));
-  width: min(100%, var(--hero-panel-width));
+  width: 100%;
+  max-width: var(--hero-panel-width);
+  margin-left: auto;
+  margin-right: auto;
   gap: var(--spacing-3);
   margin-top: var(--spacing-8);
 }
