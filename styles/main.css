@@ -365,6 +365,7 @@ main {
 
 .hero-notice-email,
 .hero-notice-email a {
+  display: block;
   font-size: 0.9rem;
   color: var(--text-secondary);
   text-decoration: none;
