@@ -332,14 +332,14 @@ main {
 
 .hero .container {
   width: 100%;
-  max-width: 1600px;
+  max-width: 1140px;
   padding: 0 var(--spacing-3);
 }
 
 .hero-content {
   width: 100%;
-  --hero-copy-width: 920px;
-  --hero-panel-width: 1440px;
+  --hero-copy-width: 860px;
+  --hero-panel-width: 1040px;
 }
 
 .hero-intro {
