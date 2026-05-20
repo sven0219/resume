@@ -134,7 +134,7 @@
       "zh": ["AWS", "阿里云", "腾讯云", "华为云"],
       "en": ["AWS", "Alibaba Cloud", "Tencent Cloud", "Huawei Cloud"]
     },
-    "tools": ["Terraform", "Ansible", "Kubernetes", "GitHub Actions", "ArgoCD", "FluxCD"],
+    "toolchain": ["Terraform", "Ansible", "Kubernetes", "GitHub Actions", "ArgoCD", "FluxCD"],
     "status": {
       "zh": "正在找芜湖的工作机会",
       "en": "Looking for job opportunities in Wuhu"

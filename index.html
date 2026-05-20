@@ -234,8 +234,12 @@
         const focusLines = getLocalized(profile.focus)
           .map((item) => `    <span class="yaml-value">- ${escapeHtml(item)}</span>`)
           .join('\n');
-        const clouds = `[${getLocalized(profile.clouds).join(', ')}]`;
-        const tools = `[${profile.tools.join(', ')}]`;
+        const cloudLines = getLocalized(profile.clouds)
+          .map((item) => `    <span class="yaml-value">- ${escapeHtml(item)}</span>`)
+          .join('\n');
+        const toolchainLines = profile.toolchain
+          .map((item) => `    <span class="yaml-value">- ${escapeHtml(item)}</span>`)
+          .join('\n');
         const status = escapeHtml(getLocalized(profile.status));
 
         return `<span class="yaml-key">apiVersion:</span> <span class="yaml-value">${escapeHtml(profile.apiVersion)}</span>
@@ -249,9 +253,9 @@
   <span class="yaml-key">focus:</span>
 ${focusLines}
   <span class="yaml-key">clouds:</span>
-    <span class="yaml-value">${escapeHtml(clouds)}</span>
-  <span class="yaml-key">tools:</span>
-    <span class="yaml-value">${escapeHtml(tools)}</span>
+${cloudLines}
+  <span class="yaml-key">toolchain:</span>
+${toolchainLines}
   <span class="yaml-key">status:</span> <span class="yaml-string">"${status}"</span>`;
       }
 
