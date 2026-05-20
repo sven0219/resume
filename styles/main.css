@@ -101,6 +101,21 @@ body {
   overflow-x: hidden;
 }
 
+body.app-loading nav,
+body.app-loading main,
+body.app-loading footer,
+body.app-loading .modal-backdrop {
+  visibility: hidden;
+  opacity: 0;
+}
+
+nav,
+main,
+footer,
+.modal-backdrop {
+  transition: opacity 120ms ease;
+}
+
 /* Background Effects */
 .bg-grid {
   position: fixed;
@@ -502,7 +517,7 @@ html[data-theme='light'] .contact-item {
 
 .hero-actions {
   display: grid;
-  grid-template-columns: repeat(3, minmax(0, 1fr));
+  grid-template-columns: repeat(4, minmax(0, 1fr));
   width: min(100%, 760px);
   gap: var(--spacing-3);
   margin-top: var(--spacing-8);
