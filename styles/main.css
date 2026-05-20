@@ -247,21 +247,26 @@ body[data-theme='light'] .nav {
 .theme-toggle {
   display: inline-flex;
   align-items: center;
-  gap: var(--spacing-2);
-  padding: var(--spacing-1) var(--spacing-3);
+  justify-content: center;
+  width: 2.5rem;
+  height: 2.5rem;
+  padding: 0;
   background: var(--bg-tertiary);
   border: 1px solid var(--border);
   border-radius: var(--radius-md);
   color: var(--text-secondary);
-  font-size: 0.875rem;
-  font-weight: 500;
+  font-size: 1rem;
+  line-height: 1;
   cursor: pointer;
   transition: var(--transition);
+  appearance: none;
+  -webkit-appearance: none;
 }
 
 .theme-toggle:hover {
   color: var(--text-primary);
   border-color: var(--primary);
+  background: color-mix(in srgb, var(--bg-tertiary) 82%, var(--primary) 18%);
 }
 
 .theme-toggle-icon {

@@ -24,9 +24,8 @@
             <span class="status-dot"></span>
             <span data-zh="开放机会" data-en="Open to opportunities">开放机会</span>
           </div>
-          <button class="theme-toggle" id="theme-toggle" type="button" aria-label="Toggle theme">
+          <button class="theme-toggle" id="theme-toggle" type="button" aria-label="切换主题" title="切换主题">
             <span class="theme-toggle-icon" aria-hidden="true">☀</span>
-            <span class="theme-toggle-label" data-zh="日间" data-en="Light">日间</span>
           </button>
           <div class="lang-switch">
             <button class="lang-btn" data-lang="zh">中文</button>
@@ -430,23 +429,30 @@
       const langBtns = document.querySelectorAll('.lang-btn');
       const themeToggle = document.getElementById('theme-toggle');
       const themeToggleIcon = themeToggle?.querySelector('.theme-toggle-icon');
-      const themeToggleLabel = themeToggle?.querySelector('.theme-toggle-label');
       let currentLang = 'en';
       let currentTheme = 'dark';
 
       function applyTheme(theme) {
         currentTheme = theme;
+        document.documentElement.dataset.theme = theme;
         document.body.dataset.theme = theme;
         if (themeToggle) {
           themeToggle.dataset.theme = theme;
+          themeToggle.setAttribute(
+            'aria-label',
+            currentLang === 'zh'
+              ? (theme === 'light' ? '切换到夜间模式' : '切换到日间模式')
+              : (theme === 'light' ? 'Switch to dark mode' : 'Switch to light mode')
+          );
+          themeToggle.setAttribute(
+            'title',
+            currentLang === 'zh'
+              ? (theme === 'light' ? '切换到夜间模式' : '切换到日间模式')
+              : (theme === 'light' ? 'Switch to dark mode' : 'Switch to light mode')
+          );
         }
         if (themeToggleIcon) {
           themeToggleIcon.textContent = theme === 'light' ? '☾' : '☀';
-        }
-        if (themeToggleLabel) {
-          themeToggleLabel.textContent = currentLang === 'zh'
-            ? (theme === 'light' ? '夜间' : '日间')
-            : (theme === 'light' ? 'Dark' : 'Light');
         }
         localStorage.setItem('preferred-theme', theme);
       }
@@ -465,14 +471,9 @@
           }
         });
 
-        if (themeToggleLabel) {
-          themeToggleLabel.textContent = lang === 'zh'
-            ? (currentTheme === 'light' ? '夜间' : '日间')
-            : (currentTheme === 'light' ? 'Dark' : 'Light');
-        }
-
         document.documentElement.lang = lang === 'zh' ? 'zh-CN' : 'en';
         localStorage.setItem('preferred-lang', lang);
+        applyTheme(currentTheme);
       }
 
       langBtns.forEach(btn => {
