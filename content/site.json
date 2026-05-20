@@ -1,0 +1,462 @@
+{
+  "site": {
+    "metaDescription": {
+      "zh": "沈文强 - DevOps / SRE / 平台工程师 | 7年以上经验 | Kubernetes | GitOps | 云原生",
+      "en": "Sven Shen - DevOps / SRE / Platform Engineer | 7+ years | Kubernetes | GitOps | Cloud Native"
+    },
+    "title": {
+      "zh": "沈文强 | DevOps / SRE / 平台工程师",
+      "en": "Sven Shen | DevOps / SRE / Platform Engineer"
+    },
+    "navTitle": {
+      "zh": "沈文强 · DevOps · 简历",
+      "en": "Sven Shen · DevOps · Resume"
+    },
+    "statusText": {
+      "zh": "开放机会",
+      "en": "Open to opportunities"
+    },
+    "themeToggle": {
+      "zh": {
+        "toLight": "切换到日间模式",
+        "toDark": "切换到夜间模式"
+      },
+      "en": {
+        "toLight": "Switch to light mode",
+        "toDark": "Switch to dark mode"
+      }
+    },
+    "footerText": {
+      "zh": "期待与您共事",
+      "en": "Looking forward to working with you"
+    }
+  },
+  "hero": {
+    "eyebrow": {
+      "zh": "在线简历",
+      "en": "Interactive Resume"
+    },
+    "title": {
+      "zh": "沈文强 · DevOps · 简历",
+      "en": "Sven Shen · DevOps · Resume"
+    },
+    "summary": {
+      "zh": "7 年以上 DevOps、SRE 与平台工程相关经验。",
+      "en": "7+ years of experience in DevOps, SRE, and platform engineering."
+    },
+    "notice": {
+      "text": {
+        "zh": "目标工作地：安徽芜湖",
+        "en": "Target location: Wuhu, Anhui"
+      },
+      "email": "hi@svenshen.me"
+    },
+    "actions": [
+      {
+        "type": "link",
+        "style": "secondary",
+        "label": {
+          "zh": "GitHub",
+          "en": "GitHub"
+        },
+        "href": "https://github.com/sven0219",
+        "icon": "github"
+      },
+      {
+        "type": "link",
+        "style": "secondary",
+        "label": {
+          "zh": "LinkedIn",
+          "en": "LinkedIn"
+        },
+        "href": "https://www.linkedin.com/in/sven-shen-wh",
+        "icon": "linkedin"
+      },
+      {
+        "type": "link",
+        "style": "secondary",
+        "label": {
+          "zh": "邮箱联系",
+          "en": "Email Me"
+        },
+        "href": "mailto:hi@svenshen.me",
+        "icon": "mail"
+      },
+      {
+        "type": "modal",
+        "style": "secondary",
+        "label": {
+          "zh": "微信联系",
+          "en": "WeChat"
+        },
+        "target": "wechat",
+        "icon": "wechat"
+      }
+    ]
+  },
+  "profile": {
+    "terminalTitle": "sven@devops:~/profile",
+    "command": {
+      "zh": " cat profile.yaml",
+      "en": " cat profile.yaml"
+    },
+    "apiVersion": "v1",
+    "kind": {
+      "zh": "DevOps / SRE / 平台工程师",
+      "en": "DevOps / SRE / Platform Engineer"
+    },
+    "name": {
+      "zh": "沈文强",
+      "en": "沈文强 (Sven Shen)"
+    },
+    "location": {
+      "zh": "目标工作地：安徽芜湖",
+      "en": "Target location: Wuhu, Anhui"
+    },
+    "email": "hi@svenshen.me",
+    "experience": {
+      "zh": "7年+",
+      "en": "7+ years"
+    },
+    "focus": {
+      "zh": [
+        "生产级 Kubernetes 与云原生平台",
+        "CI/CD、GitOps 与交付自动化",
+        "可观测性、故障响应与稳定性工程"
+      ],
+      "en": [
+        "Production Kubernetes & Cloud Native Platforms",
+        "CI/CD, GitOps & Delivery Automation",
+        "Observability, Incident Response & Reliability"
+      ]
+    },
+    "clouds": {
+      "zh": ["AWS", "阿里云", "腾讯云", "华为云"],
+      "en": ["AWS", "Alibaba Cloud", "Tencent Cloud", "Huawei Cloud"]
+    },
+    "tools": ["Terraform", "Ansible", "Kubernetes", "GitHub Actions", "ArgoCD", "FluxCD"],
+    "status": {
+      "zh": "正在找芜湖的工作机会",
+      "en": "Looking for job opportunities in Wuhu"
+    }
+  },
+  "skillsSection": {
+    "tag": {
+      "zh": "核心技术栈",
+      "en": "Core Tech Stack"
+    },
+    "title": {
+      "zh": "专业技能",
+      "en": "Professional Skills"
+    },
+    "items": [
+      {
+        "icon": "☸️",
+        "title": "Container & Orchestration",
+        "description": {
+          "zh": "容器化与编排",
+          "en": "Containerization & Orchestration"
+        },
+        "tags": ["Kubernetes", "Docker", "Helm", "EKS", "ACK"]
+      },
+      {
+        "icon": "🔄",
+        "title": "CI/CD & GitOps",
+        "description": {
+          "zh": "持续集成与部署",
+          "en": "Continuous Integration & Deployment"
+        },
+        "tags": ["ArgoCD", "FluxCD", "GitHub Actions", "GitOps"]
+      },
+      {
+        "icon": "🏗️",
+        "title": "Infrastructure as Code",
+        "description": {
+          "zh": "基础设施即代码",
+          "en": "Infrastructure as Code"
+        },
+        "tags": ["Terraform", "Ansible", "Helm"]
+      },
+      {
+        "icon": "📊",
+        "title": "Observability",
+        "description": {
+          "zh": "可观测性与告警",
+          "en": "Observability & Alerting"
+        },
+        "tags": ["Prometheus", "Grafana", "ELK", "Zabbix", "CloudWatch"]
+      },
+      {
+        "icon": "☁️",
+        "title": "Cloud Platforms",
+        "description": {
+          "zh": "云平台管理",
+          "en": "Cloud Platform Management"
+        },
+        "tags": ["AWS", "Alibaba Cloud", "Tencent Cloud", "Huawei Cloud"]
+      },
+      {
+        "icon": "💻",
+        "title": "Programming & Scripting",
+        "description": {
+          "zh": "编程与脚本",
+          "en": "Programming & Scripting"
+        },
+        "tags": ["Python", "Go", "Bash"]
+      }
+    ]
+  },
+  "highlightsSection": {
+    "tag": {
+      "zh": "核心优势",
+      "en": "Core Strengths"
+    },
+    "title": {
+      "zh": "DevOps 亮点",
+      "en": "DevOps Highlights"
+    },
+    "items": [
+      {
+        "title": {
+          "zh": "平台稳定性与 SRE 实践",
+          "en": "Platform Reliability & SRE"
+        },
+        "description": {
+          "zh": "具备生产级 Kubernetes 与云原生平台运维经验，长期围绕监控告警治理、故障响应、复盘改进、容量规划与成本优化推进稳定性建设。",
+          "en": "Hands-on experience operating production Kubernetes and cloud-native platforms, with sustained work across alerting governance, incident response, post-incident improvement, capacity planning, and cost optimization."
+        }
+      },
+      {
+        "title": {
+          "zh": "CI/CD 与 GitOps 标准化",
+          "en": "CI/CD & GitOps Standardization"
+        },
+        "description": {
+          "zh": "长期使用 Terraform、Ansible、GitHub Actions、ArgoCD 与 FluxCD 建设自动化交付体系，推动基础设施代码化、应用声明式部署以及多环境发布流程标准化。",
+          "en": "Built delivery automation with Terraform, Ansible, GitHub Actions, ArgoCD, and FluxCD, driving infrastructure-as-code, declarative application delivery, and standardized multi-environment release workflows."
+        }
+      },
+      {
+        "title": {
+          "zh": "多云基础设施治理",
+          "en": "Multi-Cloud Infrastructure Governance"
+        },
+        "description": {
+          "zh": "覆盖 AWS、阿里云、腾讯云、华为云与 IDC 场景，具备资源治理、权限控制、环境初始化、网络与集群运维及跨项目支持经验。",
+          "en": "Experienced across AWS, Alibaba Cloud, Tencent Cloud, Huawei Cloud, and IDC environments, with hands-on work in resource governance, access control, environment bootstrap, networking, cluster operations, and cross-project support."
+        }
+      },
+      {
+        "title": {
+          "zh": "可观测性、安全与工程治理",
+          "en": "Observability, Security & Engineering Governance"
+        },
+        "description": {
+          "zh": "熟悉 Prometheus、Grafana、ELK、Zabbix、CloudWatch 等体系建设，也具备 RBAC、Secrets 管理、审计日志、运维审计与标准文档沉淀经验。",
+          "en": "Built observability foundations with Prometheus, Grafana, ELK, Zabbix, and CloudWatch, while also supporting RBAC, secrets management, audit logging, operations auditing, and standardized documentation."
+        }
+      },
+      {
+        "title": {
+          "zh": "容器化改造与平台迁移",
+          "en": "Containerization & Platform Migration"
+        },
+        "description": {
+          "zh": "参与传统应用向 Kubernetes 平台迁移与容器化改造，支持部署规范统一、滚动发布、自愈能力建设以及资源利用率优化。",
+          "en": "Supported containerization and Kubernetes migration for existing applications, improving deployment standards, rolling release capability, self-healing behavior, and overall resource efficiency."
+        }
+      },
+      {
+        "title": {
+          "zh": "跨团队协作与交付推动",
+          "en": "Cross-Functional Delivery Enablement"
+        },
+        "description": {
+          "zh": "能够与研发、测试、产品、客户及跨部门团队协作推进方案评审、环境交付、问题排查与流程沉淀，提升项目落地效率与交付一致性。",
+          "en": "Worked closely with engineering, QA, product, clients, and cross-functional teams to drive solution reviews, environment delivery, troubleshooting, and process standardization across projects."
+        }
+      }
+    ]
+  },
+  "experienceSection": {
+    "tag": {
+      "zh": "职业经历",
+      "en": "Career History"
+    },
+    "title": {
+      "zh": "工作经验",
+      "en": "Work Experience"
+    },
+    "items": [
+      {
+        "start": "2022-05",
+        "end": "present",
+        "dateLabel": {
+          "zh": "2022.05 - 至今",
+          "en": "2022.05 - Present"
+        },
+        "title": {
+          "zh": "高级 DevOps 工程师",
+          "en": "Senior DevOps Engineer"
+        },
+        "company": {
+          "name": "Wiredcraft",
+          "url": "https://www.wiredcraft.com",
+          "alias": {
+            "zh": "(阳狮集团)",
+            "en": "(Publicis Groupe)"
+          },
+          "location": {
+            "zh": "上海 · 混合办公",
+            "en": "Shanghai · Hybrid"
+          }
+        },
+        "description": {
+          "zh": "负责多个客户项目的 DevOps 与生产环境运维工作，覆盖新项目交付、存量系统接手优化及日常稳定性保障。参与基础设施、CI/CD、GitOps、监控日志与发布流程方案设计，基于 Terraform、Ansible、GitHub Actions、ArgoCD / FluxCD 推动自动化交付落地，并参与故障响应、根因分析与 Runbook 沉淀。",
+          "en": "Responsible for DevOps and production operations across multiple client projects, including greenfield delivery, inherited-system optimization, and ongoing reliability support. Worked on infrastructure, CI/CD, GitOps, observability, logging, and release design, using Terraform, Ansible, GitHub Actions, ArgoCD, and FluxCD to drive delivery automation, incident response, root cause analysis, and runbook improvements."
+        },
+        "techTags": ["Terraform", "Ansible", "Kubernetes", "ArgoCD", "FluxCD", "GitHub Actions", "AWS"]
+      },
+      {
+        "start": "2020-09",
+        "end": "2022-05",
+        "dateLabel": {
+          "zh": "2020.09 - 2022.05",
+          "en": "2020.09 - 2022.05"
+        },
+        "title": {
+          "zh": "DevOps 工程师",
+          "en": "DevOps Engineer"
+        },
+        "company": {
+          "name": "Liulishuo",
+          "url": "https://www.liulishuo.com",
+          "location": {
+            "zh": "上海 · 现场办公",
+            "en": "Shanghai · On-site"
+          }
+        },
+        "description": {
+          "zh": "负责公司内部信息化系统的测试、生产环境建设与运维保障，覆盖 SpringCloud、MySQL、Redis、ELK 等核心组件。管理阿里云资源、Kubernetes 容器服务及 IDC 基础设施，参与监控告警、日志采集和自动化发布平台建设，并推动内部系统容器化改造。",
+          "en": "Responsible for test and production environment setup and operations for internal information systems, covering SpringCloud, MySQL, Redis, and ELK. Managed Alibaba Cloud resources, Kubernetes container services, and IDC infrastructure, while contributing to monitoring, logging, automated release platforms, and containerization initiatives."
+        },
+        "techTags": ["Kubernetes", "SpringCloud", "ELK", "Prometheus", "Zabbix", "Alibaba Cloud"]
+      },
+      {
+        "start": "2018-07",
+        "end": "2020-09",
+        "dateLabel": {
+          "zh": "2018.07 - 2020.09",
+          "en": "2018.07 - 2020.09"
+        },
+        "title": {
+          "zh": "运维工程师",
+          "en": "Operations Engineer"
+        },
+        "company": {
+          "name": "Qiyuesuo",
+          "url": "https://www.qiyuesuo.com",
+          "alias": {
+            "zh": "(上海泛微软件)",
+            "en": "(Shanghai Weaver Network)"
+          },
+          "location": {
+            "zh": "上海 · 现场办公",
+            "en": "Shanghai · On-site"
+          }
+        },
+        "description": {
+          "zh": "负责契约锁公有云平台的基础环境建设、发布体系维护、线上变更与日常运维保障，支撑平台从早期建设到稳定运行。参与私有化交付体系、工程协作工具链、安全加固、灾备与运维审计相关工作，并推动灰度发布与流程标准化落地。",
+          "en": "Responsible for infrastructure setup, release maintenance, online changes, and daily operations for the Qiyuesuo public cloud platform, supporting its growth from early construction to stable operation. Contributed to privatized delivery, engineering tooling, security hardening, disaster recovery, operations auditing, and canary-release standardization."
+        },
+        "techTags": ["Linux", "CI/CD", "Git", "Jira", "Alibaba Cloud"]
+      }
+    ]
+  },
+  "educationSection": {
+    "tag": {
+      "zh": "教育背景",
+      "en": "Education"
+    },
+    "title": {
+      "zh": "学历信息",
+      "en": "Academic Background"
+    },
+    "degree": {
+      "zh": "计算机科学与技术",
+      "en": "Computer Science & Technology"
+    },
+    "schoolLine": {
+      "zh": "黄山学院 · 本科 · 2014-2018",
+      "en": "Huangshan University · Bachelor's · 2014-2018"
+    }
+  },
+  "contactSection": {
+    "tag": {
+      "zh": "联系方式",
+      "en": "Contact"
+    },
+    "title": {
+      "zh": "联系我",
+      "en": "Get In Touch"
+    },
+    "items": [
+      {
+        "icon": "📧",
+        "label": {
+          "zh": "邮箱",
+          "en": "Email"
+        },
+        "value": "hi@svenshen.me",
+        "href": "mailto:hi@svenshen.me"
+      },
+      {
+        "icon": "📍",
+        "label": {
+          "zh": "地点",
+          "en": "Location"
+        },
+        "value": {
+          "zh": "目标工作地 · 安徽芜湖",
+          "en": "Target location · Wuhu, Anhui"
+        }
+      },
+      {
+        "icon": "💻",
+        "label": {
+          "zh": "GitHub",
+          "en": "GitHub"
+        },
+        "value": "github.com/sven0219",
+        "href": "https://github.com/sven0219"
+      },
+      {
+        "icon": "💼",
+        "label": {
+          "zh": "LinkedIn",
+          "en": "LinkedIn"
+        },
+        "value": "linkedin.com/in/sven-shen-wh",
+        "href": "https://www.linkedin.com/in/sven-shen-wh"
+      }
+    ]
+  },
+  "wechatModal": {
+    "eyebrow": {
+      "zh": "微信联系",
+      "en": "WeChat Contact"
+    },
+    "title": {
+      "zh": "扫码添加我",
+      "en": "Scan to add me on WeChat"
+    },
+    "subtitle": {
+      "zh": "也可以通过微信沟通工作机会",
+      "en": "We can also discuss opportunities on WeChat"
+    },
+    "images": {
+      "zh": "assets/wechat-qr.jpg",
+      "en": "assets/wechat-qr-en.jpg"
+    }
+  }
+}
