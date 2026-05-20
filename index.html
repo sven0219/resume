@@ -563,8 +563,10 @@
 
       const savedLang = localStorage.getItem('preferred-lang');
       const savedTheme = localStorage.getItem('preferred-theme');
+      const browserLang = (navigator.language || navigator.userLanguage || 'en').toLowerCase();
+      const defaultLang = browserLang.startsWith('zh') ? 'zh' : 'en';
       applyTheme(savedTheme || 'dark');
-      switchLanguage(savedLang || 'en');
+      switchLanguage(savedLang || defaultLang);
 
       // Intersection Observer for animations
       const observer = new IntersectionObserver((entries) => {
