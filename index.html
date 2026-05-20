@@ -123,6 +123,12 @@
                 </svg>
                 <span data-zh="邮箱联系" data-en="Email Me">邮箱联系</span>
               </a>
+              <button type="button" class="btn btn-secondary" id="wechat-trigger">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                  <path d="M8.5 4C4.91 4 2 6.46 2 9.5c0 1.75.96 3.31 2.46 4.32L4 17l3.03-1.52c.48.08.97.12 1.47.12.33 0 .65-.02.97-.06A5.82 5.82 0 0 1 9 13.5C9 10.46 11.91 8 15.5 8c.17 0 .35.01.52.02C15.28 5.68 12.18 4 8.5 4Zm7 5c-3.04 0-5.5 1.95-5.5 4.35 0 1.33.76 2.52 1.95 3.32L11 19l2.23-1.12c.42.07.84.12 1.27.12 3.04 0 5.5-1.95 5.5-4.35S18.54 9 15.5 9Zm-2 3.5a.75.75 0 1 1 0 1.5.75.75 0 0 1 0-1.5Zm4 0a.75.75 0 1 1 0 1.5.75.75 0 0 1 0-1.5Z"/>
+                </svg>
+                <span data-zh="微信联系" data-en="WeChat">微信联系</span>
+              </button>
             </div>
           </div>
         </div>
@@ -435,6 +441,23 @@
       </section>
     </main>
 
+    <div class="modal-backdrop" id="wechat-modal" hidden>
+      <div class="modal-card" role="dialog" aria-modal="true" aria-labelledby="wechat-modal-title">
+        <button type="button" class="modal-close" id="wechat-close" aria-label="Close">
+          <span aria-hidden="true">×</span>
+        </button>
+        <p class="modal-eyebrow">
+          <span class="comment">//</span>
+          <span data-zh="微信联系" data-en="WeChat Contact">微信联系</span>
+        </p>
+        <h2 class="modal-title" id="wechat-modal-title" data-zh="扫码添加我" data-en="Scan to add me on WeChat">扫码添加我</h2>
+        <p class="modal-subtitle" data-zh="也可以通过微信沟通工作机会" data-en="We can also discuss opportunities on WeChat">
+          也可以通过微信沟通工作机会
+        </p>
+        <img class="wechat-qr-image" src="assets/wechat-qr.jpg" alt="WeChat QR code" />
+      </div>
+    </div>
+
     <!-- Footer -->
     <footer>
       <div class="container">
@@ -453,6 +476,9 @@
       const langBtns = document.querySelectorAll('.lang-btn');
       const themeToggle = document.getElementById('theme-toggle');
       const themeToggleIcon = themeToggle?.querySelector('.theme-toggle-icon');
+      const wechatTrigger = document.getElementById('wechat-trigger');
+      const wechatModal = document.getElementById('wechat-modal');
+      const wechatClose = document.getElementById('wechat-close');
       let currentLang = 'en';
       let currentTheme = 'dark';
 
@@ -508,6 +534,26 @@
 
       themeToggle?.addEventListener('click', () => {
         applyTheme(currentTheme === 'light' ? 'dark' : 'light');
+      });
+
+      function toggleWechatModal(open) {
+        if (!wechatModal) return;
+        wechatModal.hidden = !open;
+        document.body.classList.toggle('modal-open', open);
+      }
+
+      wechatTrigger?.addEventListener('click', () => toggleWechatModal(true));
+      wechatClose?.addEventListener('click', () => toggleWechatModal(false));
+      wechatModal?.addEventListener('click', (event) => {
+        if (event.target === wechatModal) {
+          toggleWechatModal(false);
+        }
+      });
+
+      document.addEventListener('keydown', (event) => {
+        if (event.key === 'Escape') {
+          toggleWechatModal(false);
+        }
       });
 
       const savedLang = localStorage.getItem('preferred-lang');
