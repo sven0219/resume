@@ -454,7 +454,7 @@
         <p class="modal-subtitle" data-zh="也可以通过微信沟通工作机会" data-en="We can also discuss opportunities on WeChat">
           也可以通过微信沟通工作机会
         </p>
-        <img class="wechat-qr-image" src="assets/wechat-qr.jpg" alt="WeChat QR code" />
+        <img class="wechat-qr-image" id="wechat-qr-image" src="assets/wechat-qr-en.jpg" alt="WeChat QR code" />
       </div>
     </div>
 
@@ -479,6 +479,7 @@
       const wechatTrigger = document.getElementById('wechat-trigger');
       const wechatModal = document.getElementById('wechat-modal');
       const wechatClose = document.getElementById('wechat-close');
+      const wechatQrImage = document.getElementById('wechat-qr-image');
       let currentLang = 'en';
       let currentTheme = 'dark';
 
@@ -522,6 +523,10 @@
             el.textContent = text;
           }
         });
+
+        if (wechatQrImage) {
+          wechatQrImage.src = lang === 'zh' ? 'assets/wechat-qr.jpg' : 'assets/wechat-qr-en.jpg';
+        }
 
         document.documentElement.lang = lang === 'zh' ? 'zh-CN' : 'en';
         localStorage.setItem('preferred-lang', lang);
