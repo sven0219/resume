@@ -335,16 +335,17 @@ main {
   display: flex;
   flex-direction: column;
   align-items: center;
-  --hero-rail-width: 860px;
+  --hero-copy-width: 860px;
+  --hero-panel-width: 980px;
 }
 
 .hero-intro {
-  width: min(100%, var(--hero-rail-width));
+  width: min(100%, var(--hero-copy-width));
   margin-bottom: var(--spacing-6);
 }
 
 .hero-notice {
-  width: min(100%, var(--hero-rail-width));
+  width: min(100%, var(--hero-copy-width));
   display: flex;
   align-items: center;
   gap: var(--spacing-3);
@@ -412,7 +413,7 @@ main {
 }
 
 .terminal-window {
-  width: min(100%, var(--hero-rail-width));
+  width: min(100%, var(--hero-panel-width));
   background: var(--bg-secondary);
   border: 1px solid var(--border);
   border-radius: var(--radius-xl);
@@ -517,7 +518,7 @@ html[data-theme='light'] .contact-item {
 .hero-actions {
   display: grid;
   grid-template-columns: repeat(4, minmax(0, 1fr));
-  width: min(100%, var(--hero-rail-width));
+  width: min(100%, var(--hero-panel-width));
   gap: var(--spacing-3);
   margin-top: var(--spacing-8);
 }
