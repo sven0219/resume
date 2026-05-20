@@ -135,22 +135,11 @@
       "en": ["AWS", "Alibaba Cloud", "Tencent Cloud", "Huawei Cloud"]
     },
     "toolchain": [
-      "Terraform",
-      "Ansible",
-      "Docker",
       "Kubernetes",
-      "Helm",
-      "GitHub Actions",
+      "Terraform",
       "ArgoCD",
-      "FluxCD",
-      "Prometheus",
-      "Grafana",
-      "ELK",
-      "CloudWatch",
-      "Zabbix",
-      "Python",
-      "Go",
-      "Bash"
+      "GitHub Actions",
+      "Ansible"
     ],
     "status": {
       "zh": "正在找芜湖的工作机会",
