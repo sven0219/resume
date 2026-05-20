@@ -24,6 +24,10 @@
             <span class="status-dot"></span>
             <span data-zh="开放机会" data-en="Open to opportunities">开放机会</span>
           </div>
+          <button class="theme-toggle" id="theme-toggle" type="button" aria-label="Toggle theme">
+            <span class="theme-toggle-icon" aria-hidden="true">☀</span>
+            <span class="theme-toggle-label" data-zh="日间" data-en="Light">日间</span>
+          </button>
           <div class="lang-switch">
             <button class="lang-btn" data-lang="zh">中文</button>
             <button class="lang-btn active" data-lang="en">EN</button>
@@ -424,7 +428,28 @@
 
       // Language switch functionality
       const langBtns = document.querySelectorAll('.lang-btn');
+      const themeToggle = document.getElementById('theme-toggle');
+      const themeToggleIcon = themeToggle?.querySelector('.theme-toggle-icon');
+      const themeToggleLabel = themeToggle?.querySelector('.theme-toggle-label');
       let currentLang = 'en';
+      let currentTheme = 'dark';
+
+      function applyTheme(theme) {
+        currentTheme = theme;
+        document.body.dataset.theme = theme;
+        if (themeToggle) {
+          themeToggle.dataset.theme = theme;
+        }
+        if (themeToggleIcon) {
+          themeToggleIcon.textContent = theme === 'light' ? '☾' : '☀';
+        }
+        if (themeToggleLabel) {
+          themeToggleLabel.textContent = currentLang === 'zh'
+            ? (theme === 'light' ? '夜间' : '日间')
+            : (theme === 'light' ? 'Dark' : 'Light');
+        }
+        localStorage.setItem('preferred-theme', theme);
+      }
 
       function switchLanguage(lang) {
         currentLang = lang;
@@ -440,6 +465,12 @@
           }
         });
 
+        if (themeToggleLabel) {
+          themeToggleLabel.textContent = lang === 'zh'
+            ? (currentTheme === 'light' ? '夜间' : '日间')
+            : (currentTheme === 'light' ? 'Dark' : 'Light');
+        }
+
         document.documentElement.lang = lang === 'zh' ? 'zh-CN' : 'en';
         localStorage.setItem('preferred-lang', lang);
       }
@@ -448,7 +479,13 @@
         btn.addEventListener('click', () => switchLanguage(btn.dataset.lang));
       });
 
+      themeToggle?.addEventListener('click', () => {
+        applyTheme(currentTheme === 'light' ? 'dark' : 'light');
+      });
+
       const savedLang = localStorage.getItem('preferred-lang');
+      const savedTheme = localStorage.getItem('preferred-theme');
+      applyTheme(savedTheme || 'dark');
       switchLanguage(savedLang || 'en');
 
       // Intersection Observer for animations
