@@ -298,7 +298,7 @@
               <div class="experience-header">
                 <div class="experience-meta">
                   <span class="experience-date">2022.05 - <span data-zh="至今" data-en="Present">至今</span></span>
-                  <span class="experience-duration">4 yrs 1 mo</span>
+                  <span class="experience-duration" data-start="2022-05" data-current="true">4 yrs 1 mo</span>
                 </div>
                 <h3 class="experience-title" data-zh="高级 DevOps 工程师" data-en="Senior DevOps Engineer">高级 DevOps 工程师</h3>
                 <p class="experience-company">
@@ -531,6 +531,34 @@
         document.documentElement.lang = lang === 'zh' ? 'zh-CN' : 'en';
         localStorage.setItem('preferred-lang', lang);
         applyTheme(currentTheme);
+        updateCurrentDurations();
+      }
+
+      function formatDuration(startValue, lang) {
+        const [startYear, startMonth] = startValue.split('-').map(Number);
+        const now = new Date();
+        let months = (now.getFullYear() - startYear) * 12 + (now.getMonth() + 1 - startMonth);
+        if (months < 0) months = 0;
+        const years = Math.floor(months / 12);
+        const remainingMonths = months % 12;
+
+        if (lang === 'zh') {
+          if (years > 0 && remainingMonths > 0) return `${years} 年 ${remainingMonths} 个月`;
+          if (years > 0) return `${years} 年`;
+          return `${remainingMonths} 个月`;
+        }
+
+        const yearPart = years > 0 ? `${years} yr${years > 1 ? 's' : ''}` : '';
+        const monthPart = remainingMonths > 0 ? `${remainingMonths} mo` : '';
+        return [yearPart, monthPart].filter(Boolean).join(' ') || '0 mo';
+      }
+
+      function updateCurrentDurations() {
+        document.querySelectorAll('.experience-duration[data-current="true"]').forEach((el) => {
+          const startValue = el.dataset.start;
+          if (!startValue) return;
+          el.textContent = formatDuration(startValue, currentLang);
+        });
       }
 
       langBtns.forEach(btn => {
