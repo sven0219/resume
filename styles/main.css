@@ -63,7 +63,7 @@
   --transition: 200ms ease;
 }
 
-body[data-theme='light'] {
+:root[data-theme='light'] {
   --primary: #0ea5a4;
   --primary-glow: rgba(14, 165, 164, 0.18);
   --secondary: #2563eb;
@@ -116,7 +116,7 @@ body {
   z-index: 0;
 }
 
-body[data-theme='light'] .bg-grid {
+html[data-theme='light'] .bg-grid {
   background-image:
     linear-gradient(rgba(14, 165, 164, 0.05) 1px, transparent 1px),
     linear-gradient(90deg, rgba(14, 165, 164, 0.05) 1px, transparent 1px);
@@ -145,7 +145,7 @@ body[data-theme='light'] .bg-grid {
   background: var(--secondary);
 }
 
-body[data-theme='light'] .bg-glow {
+html[data-theme='light'] .bg-glow {
   opacity: 0.08;
 }
 
@@ -169,7 +169,7 @@ body[data-theme='light'] .bg-glow {
   opacity: 0.2;
 }
 
-body[data-theme='light'].scanlines::before {
+html[data-theme='light'] body.scanlines::before {
   opacity: 0.05;
 }
 
@@ -185,7 +185,7 @@ body[data-theme='light'].scanlines::before {
   z-index: 100;
 }
 
-body[data-theme='light'] .nav {
+html[data-theme='light'] .nav {
   background: rgba(244, 247, 251, 0.88);
 }
 
@@ -335,12 +335,12 @@ main {
     0 8px 32px rgba(0, 0, 0, 0.3);
 }
 
-body[data-theme='light'] .terminal-window,
-body[data-theme='light'] .skill-card,
-body[data-theme='light'] .highlight-card,
-body[data-theme='light'] .experience-card,
-body[data-theme='light'] .education-card,
-body[data-theme='light'] .contact-item {
+html[data-theme='light'] .terminal-window,
+html[data-theme='light'] .skill-card,
+html[data-theme='light'] .highlight-card,
+html[data-theme='light'] .experience-card,
+html[data-theme='light'] .education-card,
+html[data-theme='light'] .contact-item {
   box-shadow:
     0 0 0 1px var(--border-light),
     0 12px 32px rgba(15, 23, 42, 0.06);
@@ -482,7 +482,7 @@ body[data-theme='light'] .contact-item {
   background: var(--bg-secondary);
 }
 
-body[data-theme='light'] .section-alt {
+html[data-theme='light'] .section-alt {
   background: rgba(255, 255, 255, 0.55);
 }
 

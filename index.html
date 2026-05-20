@@ -438,7 +438,9 @@
       function applyTheme(theme) {
         currentTheme = theme;
         document.documentElement.dataset.theme = theme;
-        document.body.dataset.theme = theme;
+        if (document.body) {
+          document.body.dataset.theme = theme;
+        }
         if (themeToggle) {
           themeToggle.dataset.theme = theme;
           themeToggle.setAttribute(
