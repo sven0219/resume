@@ -139,7 +139,8 @@
       "Terraform",
       "ArgoCD",
       "GitHub Actions",
-      "Prometheus"
+      "Prometheus",
+      "ELK"
     ],
     "status": {
       "zh": "正在找芜湖的工作机会",
